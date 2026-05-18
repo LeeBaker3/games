@@ -7,6 +7,7 @@ All notable changes to this repository should be recorded here.
 ### Added
 - Initial repository structure and GitHub agent definitions.
 - Documentation standards and repository templates.
+- Sprint planning documents under `docs/sprints/` with a reusable template and MVP sprint breakdown.
 
 ### Changed
 - Repository instructions now require PEP 8-aligned Python style, TypeScript style conventions, versioned API routes, and behavior-focused tests.
