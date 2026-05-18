@@ -1,5 +1,176 @@
 @import './tokens.css';
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top left, rgba(255, 196, 113, 0.22), transparent 28%),
+    radial-gradient(circle at top right, rgba(124, 58, 237, 0.14), transparent 22%),
+    linear-gradient(180deg, #fff9f1 0%, #f5efe7 100%);
+  color: #1f2937;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: var(--font-sans);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.hero-panel,
+.catalog-panel,
+.foundation-panel {
+  border: 1px solid rgba(31, 41, 55, 0.08);
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 20px 45px rgba(31, 41, 55, 0.08);
+  backdrop-filter: blur(14px);
+}
+
+.hero-panel {
+  display: grid;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.hero-copy h1,
+.section-heading h2 {
+  margin: 0;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.hero-copy h1 {
+  max-width: 12ch;
+  font-size: clamp(2.5rem, 6vw, 4.75rem);
+}
+
+.hero-summary {
+  max-width: 65ch;
+  margin: 1rem 0 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #c2410c;
+}
+
+.hero-highlights {
+  display: grid;
+  gap: 0.75rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.hero-highlights li {
+  padding: 0.95rem 1rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.18), rgba(255, 255, 255, 0.92));
+  color: #374151;
+}
+
+.catalog-panel,
+.foundation-panel {
+  padding: 1.5rem;
+}
+
+.section-heading {
+  margin-bottom: 1rem;
+}
+
+.section-heading h2 {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+}
+
+.game-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.game-card {
+  padding: 1rem;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(31, 41, 55, 0.08);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(255, 248, 235, 0.92));
+}
+
+.game-card__header {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.game-card__header h3 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.game-card__slug {
+  font-size: 0.85rem;
+  color: #9a3412;
+}
+
+.game-card__details {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1rem 0 0;
+}
+
+.game-card__details div {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.game-card__details dt {
+  font-weight: 700;
+  color: #374151;
+}
+
+.game-card__details dd {
+  margin: 0;
+  text-align: right;
+  color: #6b7280;
+}
+
+.foundation-panel p {
+  margin: 0;
+  max-width: 70ch;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+@media (min-width: 720px) {
+  .hero-panel {
+    grid-template-columns: minmax(0, 1.3fr) minmax(250px, 0.7fr);
+    align-items: end;
+  }
+}
 }

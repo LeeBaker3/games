@@ -8,11 +8,13 @@ All notable changes to this repository should be recorded here.
 - Initial repository structure and GitHub agent definitions.
 - Documentation standards and repository templates.
 - Sprint planning documents under `docs/sprints/` with a reusable template and MVP sprint breakdown.
+- Sprint 1 frontend shell now renders the manifest-driven game catalog and versioned API baseline.
 
 ### Changed
 - Repository instructions now require PEP 8-aligned Python style, TypeScript style conventions, versioned API routes, and behavior-focused tests.
 - Backend API routes now use the `/api/v1` prefix for published endpoints.
 - Repository instructions now include explicit TypeScript lint and formatting guidance for strict typing, imports, JSX layout, and code hygiene.
+- The frontend landing page now uses shared game manifest data instead of a placeholder screen.
 
 ### Fixed
 - None.
