@@ -12,6 +12,9 @@
 - Add or update functional tests for API routes, shared workflows, and important business rules.
 - Add or update end-to-end tests for user-facing journeys that cross pages, services, or authentication boundaries.
 - Prefer tests that verify visible behavior over implementation details.
+- Tests should fail when the behavior they protect breaks; do not add tests that only exercise startup paths, stubs, snapshots, or always-true assertions.
+- Prefer contract tests at API boundaries, pure rule tests for shared logic, and journey tests for critical user flows before using UI snapshots.
+- If a module is still a placeholder, say so in the PR rather than inventing coverage that does not prove real functionality.
 - Fix failing tests or explain why they are unrelated before merging.
 
 ## Lint and Code Quality

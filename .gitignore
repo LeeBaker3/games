@@ -14,6 +14,7 @@ node_modules/
 dist/
 coverage/
 .vite/
+src/frontend/tsconfig.tsbuildinfo
 
 # OS / editor
 .DS_Store
