@@ -9,7 +9,8 @@ All notable changes to this repository should be recorded here.
 - Documentation standards and repository templates.
 
 ### Changed
-- None.
+- Repository instructions now require PEP 8-aligned Python style, TypeScript style conventions, versioned API routes, and behavior-focused tests.
+- Backend API routes now use the `/api/v1` prefix for published endpoints.
 
 ### Fixed
 - None.
