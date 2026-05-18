@@ -29,3 +29,39 @@ export interface LoginPayload {
 export interface UpdateProfilePayload {
     displayName: string;
 }
+
+export interface LeaderboardPlayer {
+    id: string;
+    displayName: string;
+}
+
+export interface LeaderboardEntry {
+    rank: number;
+    user: LeaderboardPlayer;
+    score: number;
+    submittedAt: string;
+    moderationStatus: 'approved' | 'flagged';
+    moderationReason: string | null;
+}
+
+export interface LeaderboardPageResponse {
+    gameSlug: string;
+    entries: LeaderboardEntry[];
+    total: number;
+    limit: number;
+    offset: number;
+    currentUserRank: number | null;
+}
+
+export interface ScoreSubmissionPayload {
+    score: number;
+    metadata?: Record<string, string>;
+}
+
+export interface ScoreSubmissionResponse {
+    gameSlug: string;
+    score: number;
+    rank: number;
+    moderationStatus: 'approved' | 'flagged';
+    moderationReason: string | null;
+}

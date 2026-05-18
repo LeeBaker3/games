@@ -32,9 +32,19 @@ The backend API should be documented from FastAPI-generated OpenAPI schemas wher
 - `GET /api/v1/me` returns the current user profile.
 - `PATCH /api/v1/me` updates the current user display name.
 
+## Sprint 4 Routes
+- `GET /api/v1/games/{slug}/leaderboard` returns the global all-time leaderboard for a game.
+- `POST /api/v1/games/{slug}/scores` submits an authenticated score for a game.
+
+## Score Rules
+- Score submissions require an authenticated session.
+- Leaderboard queries are public but can include the current user's rank when a session cookie is present.
+- Suspicious scores are flagged server-side and surfaced with moderation metadata.
+
 ## Session Notes
 - Authentication currently uses an HTTP-only cookie session for the MVP scaffold.
 - Accounts and profiles are wired through backend services and the frontend auth client.
+- Leaderboard data is currently stored in memory for the MVP scaffold.
 
 ## TODO
 - Add endpoint request and response schemas.
