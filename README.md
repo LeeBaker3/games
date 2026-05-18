@@ -11,7 +11,7 @@ Browser games platform with a Python backend and a React + TypeScript + Vite fro
 ## Current Scope
 - Versioned backend routes under `/api/v1`
 - Anonymous game hub with Snake
-- Accounts, identity, and Snake leaderboards with login, profile, and OAuth scaffolding
+- Accounts, identity, Snake leaderboards, and private invite multiplayer scaffolding
 
 ## Planned stack
 - Backend: FastAPI

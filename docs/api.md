@@ -36,10 +36,21 @@ The backend API should be documented from FastAPI-generated OpenAPI schemas wher
 - `GET /api/v1/games/{slug}/leaderboard` returns the global all-time leaderboard for a game.
 - `POST /api/v1/games/{slug}/scores` submits an authenticated score for a game.
 
+## Sprint 5 Routes
+- `POST /api/v1/matches` creates a private invite match room.
+- `GET /api/v1/matches/{id}` returns match metadata for participants.
+- `POST /api/v1/matches/{id}/join` joins a private invite match using an invite token.
+- `WS /ws/matches/{id}` carries realtime match messages.
+
 ## Score Rules
 - Score submissions require an authenticated session.
 - Leaderboard queries are public but can include the current user's rank when a session cookie is present.
 - Suspicious scores are flagged server-side and surfaced with moderation metadata.
+
+## Multiplayer Notes
+- Private matches are currently backed by in-memory state for the MVP scaffold.
+- WebSocket handling currently publishes join acknowledgements, heartbeats, snapshots, and generic errors.
+- Match access is restricted to the host and the invited guest.
 
 ## Session Notes
 - Authentication currently uses an HTTP-only cookie session for the MVP scaffold.

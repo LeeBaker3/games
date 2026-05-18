@@ -4,7 +4,7 @@ import { describe, expect, it } from 'vitest';
 import { App } from '../../src/App';
 
 describe('App shell', () => {
-    it('renders the hub shell, catalog, snake controls, leaderboard, and auth surfaces', () => {
+    it('renders the hub shell, catalog, snake controls, leaderboard, auth, and match surfaces', () => {
         const markup = renderToStaticMarkup(<App />);
 
         expect(markup).toContain('One hub for quick games, scores, and private matches.');
@@ -18,5 +18,6 @@ describe('App shell', () => {
         expect(markup).toContain('Snake leaderboard');
         expect(markup).toContain('Sign in or create an account');
         expect(markup).toContain('Current user profile');
+        expect(markup).toContain('Tic-Tac-Toe multiplayer');
     });
 });
