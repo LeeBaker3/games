@@ -300,6 +300,138 @@ textarea {
     color: #166534;
 }
 
+.maze-chase-panel {
+    display: grid;
+    gap: 1rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(31, 41, 55, 0.08);
+    border-radius: 1.5rem;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 20px 45px rgba(31, 41, 55, 0.08);
+}
+
+.maze-chase-summary,
+.maze-chase-status,
+.maze-chase-help {
+    margin: 0;
+    line-height: 1.6;
+    color: #4b5563;
+}
+
+.maze-chase-layout {
+    display: grid;
+    gap: 1rem;
+}
+
+.maze-chase-board {
+    display: grid;
+    gap: 0.25rem;
+    width: fit-content;
+    padding: 0.75rem;
+    border-radius: 1.25rem;
+    background: #172033;
+}
+
+.maze-chase-row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.25rem;
+}
+
+.maze-chase-cell {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.45rem;
+    font-size: 0.95rem;
+    line-height: 1;
+}
+
+.maze-chase-cell--wall {
+    background: #0f172a;
+}
+
+.maze-chase-cell--path {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 248, 235, 0.86));
+}
+
+.maze-chase-cell--beacon {
+    background: linear-gradient(180deg, rgba(251, 191, 36, 0.25), rgba(255, 248, 235, 0.92));
+    color: #b45309;
+}
+
+.maze-chase-cell--exit {
+    box-shadow: inset 0 0 0 2px rgba(15, 23, 42, 0.22);
+}
+
+.maze-chase-cell--player {
+    background: #0f766e;
+    color: #fff;
+    font-weight: 700;
+}
+
+.maze-chase-cell--complete {
+    background: #166534;
+    color: #fff;
+}
+
+.maze-chase-cell--start::after {
+    content: '';
+    position: absolute;
+    inset: 0.15rem;
+    border-radius: inherit;
+    border: 1px dashed rgba(15, 23, 42, 0.18);
+    pointer-events: none;
+}
+
+.maze-chase-sidebar {
+    display: grid;
+    gap: 0.85rem;
+}
+
+.maze-chase-stats {
+    display: grid;
+    gap: 0.5rem;
+    margin: 0;
+}
+
+.maze-chase-stats div {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.maze-chase-stats dt {
+    font-weight: 700;
+}
+
+.maze-chase-stats dd {
+    margin: 0;
+}
+
+.maze-chase-actions,
+.maze-chase-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.maze-chase-actions button,
+.maze-chase-controls button {
+    border: 0;
+    border-radius: 999px;
+    padding: 0.7rem 1rem;
+    background: #111827;
+    color: #fff;
+    font-weight: 600;
+}
+
+.maze-chase-help {
+    color: #6b7280;
+}
+
 .leaderboard-panel {
     display: grid;
     gap: 1rem;
@@ -499,6 +631,11 @@ textarea {
     .leaderboard-table td:last-child,
     .leaderboard-table th:last-child {
         width: 45%;
+    }
+
+    .maze-chase-layout {
+        grid-template-columns: minmax(0, auto) minmax(280px, 1fr);
+        align-items: start;
     }
 
     .match-grid {

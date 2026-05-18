@@ -22,6 +22,11 @@ This document is the source of truth for environment variables, runtime settings
 | `CORS_ORIGINS` | Yes | None | Allowed frontend origins. | Comma-separated list. |
 | `LOG_LEVEL` | No | `info` | Logging verbosity. | Use lowercase values. |
 
+## Runtime Notes
+- `APP_NAME`, `APP_VERSION`, `APP_ENV`, `LOG_LEVEL`, and `CORS_ORIGINS` are consumed by the backend runtime settings layer.
+- `INVITE_LINK_TTL_MINUTES` documents the intended private-room expiry window for the multiplayer scaffold.
+- Keep deployment-only values out of source control and provide them through the hosting platform or secret store.
+
 ## Auth and Multiplayer Settings
 | Name | Required | Default | Purpose | Notes |
 | --- | --- | --- | --- | --- |

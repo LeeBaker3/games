@@ -15,3 +15,4 @@ def test_health_endpoint_returns_ok_status() -> None:
 
     assert response.status_code == 200
     assert response.json() == {"status": "ok"}
+    assert "X-Request-Duration-Ms" in response.headers

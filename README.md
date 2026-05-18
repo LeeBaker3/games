@@ -10,12 +10,12 @@ Browser games platform with a Python backend and a React + TypeScript + Vite fro
 
 ## Current Scope
 - Versioned backend routes under `/api/v1`
-- Anonymous game hub with Snake
-- Accounts, identity, Snake leaderboards, and private invite multiplayer scaffolding
+- Anonymous game hub with Maze Chase and Snake
+- Accounts, identity, Snake leaderboards, private invite multiplayer, and release hardening
 
 ## Planned stack
-- Backend: FastAPI
-- Frontend: React, TypeScript, Vite
-- Data: PostgreSQL
+- Backend: FastAPI ASGI service
+- Frontend: React, TypeScript, Vite, HTML5, and CSS
+- Data: PostgreSQL for persistent application data
 - Realtime: WebSockets for private invite multiplayer
-- Optional infrastructure: Redis
+- Optional infrastructure: Redis for sessions, rate limiting, and room state

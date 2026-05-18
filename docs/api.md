@@ -56,6 +56,9 @@ The backend API should be documented from FastAPI-generated OpenAPI schemas wher
 - Authentication currently uses an HTTP-only cookie session for the MVP scaffold.
 - Accounts and profiles are wired through backend services and the frontend auth client.
 - Leaderboard data is currently stored in memory for the MVP scaffold.
+- Maze Chase is rendered as a client-side game and does not require a dedicated backend route in the MVP.
+- The backend emits request-duration headers and request logs for basic observability.
+- CORS origins are configured from deployment settings so the frontend can be hosted separately.
 
 ## TODO
 - Add endpoint request and response schemas.
