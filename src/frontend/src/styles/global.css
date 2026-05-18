@@ -123,8 +123,111 @@ textarea {
 .game-card__header {
     display: flex;
     gap: 0.75rem;
-    justify-content: space-between;
+    max-width: 1480px;
     align-items: baseline;
+    padding: 0 1rem 2rem;
+}
+
+.app-shell--immersive {
+    min-height: calc(100vh - 7rem);
+    align-items: start;
+}
+
+.app-frame {
+    display: grid;
+    gap: 1rem;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: minmax(0, 1fr);
+    margin: 0 auto;
+    padding: 1rem;
+    width: min(1480px, calc(100% - 2rem));
+    border: 1px solid rgba(31, 41, 55, 0.08);
+    border-radius: 1.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 20px 45px rgba(31, 41, 55, 0.08);
+    backdrop-filter: blur(14px);
+}
+
+.brand-lockup {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+.brand-mark {
+    display: grid;
+    place-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 0.9rem;
+    background: linear-gradient(135deg, #0f172a, #f97316);
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+}
+
+.brand-eyebrow {
+    margin: 0;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #9a3412;
+}
+
+.brand-lockup h1 {
+    margin: 0.15rem 0 0;
+    font-size: 1.1rem;
+    line-height: 1.2;
+}
+
+.top-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.top-nav__item {
+    border: 1px solid rgba(31, 41, 55, 0.12);
+    border-radius: 999px;
+    padding: 0.7rem 1rem;
+    background: rgba(255, 255, 255, 0.92);
+    color: #334155;
+    font-weight: 700;
+}
+
+.top-nav__item--active {
+    background: #111827;
+    color: #fff;
+    border-color: #111827;
+}
+
+.hero-panel--immersive {
+    min-height: clamp(22rem, 38vh, 32rem);
+    align-content: center;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.hero-actions button,
+.game-card__launch {
+    border: 0;
+    border-radius: 999px;
+    padding: 0.8rem 1.1rem;
+    background: #0f172a;
+    color: #fff;
+    font-weight: 700;
 }
 
 .game-card__header h3 {
@@ -132,6 +235,11 @@ textarea {
     font-size: 1.15rem;
 }
 
+
+.game-card--launchable {
+    display: grid;
+    gap: 0.9rem;
+}
 .game-card__slug {
     font-size: 0.85rem;
     color: #9a3412;

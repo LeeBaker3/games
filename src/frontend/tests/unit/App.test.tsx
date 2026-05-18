@@ -4,20 +4,17 @@ import { describe, expect, it } from 'vitest';
 import { App } from '../../src/App';
 
 describe('App shell', () => {
-    it('renders the hub shell, catalog, snake controls, leaderboard, auth, and match surfaces', () => {
+    it('renders the menu-driven home shell without API copy', () => {
         const markup = renderToStaticMarkup(<App />);
 
-        expect(markup).toContain('One hub for quick games, scores, and private matches.');
+        expect(markup).toContain('Play instantly, from one clean menu.');
+        expect(markup).toContain('Home');
         expect(markup).toContain('Maze Chase');
         expect(markup).toContain('Snake');
         expect(markup).toContain('Tic-Tac-Toe');
-        expect(markup).toContain('/api/v1/health');
-        expect(markup).toContain('Start');
-        expect(markup).toContain('Pause');
-        expect(markup).toContain('Resume');
-        expect(markup).toContain('Snake leaderboard');
-        expect(markup).toContain('Sign in or create an account');
-        expect(markup).toContain('Current user profile');
-        expect(markup).toContain('Tic-Tac-Toe multiplayer');
+        expect(markup).toContain('Play Maze Chase');
+        expect(markup).toContain('Play Snake');
+        expect(markup).toContain('Open Multiplayer');
+        expect(markup).not.toContain('/api/v1/health');
     });
 });
