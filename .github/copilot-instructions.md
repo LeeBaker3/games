@@ -26,7 +26,11 @@
 
 ## Code Style Standards
 - Python code should follow PEP 8, use PEP 257 docstrings where documentation is needed, and stay compatible with Ruff formatting and linting.
-- TypeScript code should use strict typing, clear module boundaries, and consistent formatting compatible with the repo's TypeScript compiler and formatter.
+- TypeScript and TSX code should use strict typing, clear module boundaries, and consistent formatting compatible with the repo's TypeScript compiler and formatter.
+- Keep TypeScript formatting consistent and readable: 2-space indentation, single quotes, semicolons, trailing commas where allowed, and line wrapping that keeps long JSX and object literals scannable.
+- Prefer `type` aliases for simple shapes, `interface` for extendable object contracts, `readonly` for immutable values, `unknown` over `any`, and explicit return types for exported functions and components.
+- Remove unused imports, variables, and parameters rather than suppressing them, and keep public APIs narrow and well named.
+- Keep JSX props and long expressions grouped so that multiline component calls remain easy to diff and review.
 - Prefer `camelCase` for variables and functions, `PascalCase` for classes, components, and types, and `snake_case` for Python modules, functions, and test names.
 - Keep route handlers thin and move business logic into services or shared helpers.
 - Name files and folders consistently with their language conventions, and keep route or game names aligned with the existing repo structure.
