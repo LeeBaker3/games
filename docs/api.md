@@ -23,6 +23,19 @@ The backend API should be documented from FastAPI-generated OpenAPI schemas wher
 - Private invite matches
 - Match WebSockets
 
+## Sprint 3 Routes
+- `POST /api/v1/auth/register` creates an account and starts a session.
+- `POST /api/v1/auth/login` authenticates a user with email and password.
+- `POST /api/v1/auth/logout` ends the current session.
+- `GET /api/v1/auth/oauth/providers` lists supported OAuth providers.
+- `POST /api/v1/auth/oauth/{provider}/callback` completes the provider callback flow.
+- `GET /api/v1/me` returns the current user profile.
+- `PATCH /api/v1/me` updates the current user display name.
+
+## Session Notes
+- Authentication currently uses an HTTP-only cookie session for the MVP scaffold.
+- Accounts and profiles are wired through backend services and the frontend auth client.
+
 ## TODO
 - Add endpoint request and response schemas.
 - Add authentication requirements by endpoint.

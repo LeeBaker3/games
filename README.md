@@ -8,6 +8,11 @@ Browser games platform with a Python backend and a React + TypeScript + Vite fro
 - [Model recommendations](docs/agent-model-recommendations.md)
 - [PRD review notes](docs/prd-review-suggestions.md)
 
+## Current Scope
+- Versioned backend routes under `/api/v1`
+- Anonymous game hub with Snake
+- Accounts and identity flows with login, profile, and OAuth scaffolding
+
 ## Planned stack
 - Backend: FastAPI
 - Frontend: React, TypeScript, Vite
