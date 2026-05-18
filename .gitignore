@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+venv/
+.env
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Node / frontend
+node_modules/
+dist/
+coverage/
+.vite/
+
+# OS / editor
+.DS_Store
+.vscode/
+!.vscode/agents/
+!.vscode/extensions.json

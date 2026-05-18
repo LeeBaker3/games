@@ -1,0 +1,1 @@
+"""Game catalog business logic."""

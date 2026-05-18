@@ -1,0 +1,1 @@
+"""Shared game lifecycle concepts."""
