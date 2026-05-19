@@ -7,9 +7,25 @@ All notable changes to this repository should be recorded here.
 ### Added
 - Initial repository structure and GitHub agent definitions.
 - Documentation standards and repository templates.
+- Sprint planning documents under `docs/sprints/` with a reusable template and MVP sprint breakdown.
+- Sprint 1 frontend shell now renders the manifest-driven game catalog and versioned API baseline.
+- Sprint 2 adds the playable anonymous game hub and Snake lifecycle engine.
+- Sprint 3 adds cookie-based auth, OAuth provider abstraction, and account/profile screens.
+- Sprint 4 adds authenticated Snake score submission and leaderboard queries.
+- Sprint 5 adds private invite Tic-Tac-Toe matchmaking and WebSocket scaffolding.
+- Sprint 6 adds a playable Maze Chase game and release-hardening logging and deployment settings.
 
 ### Changed
-- None.
+- Repository instructions now require PEP 8-aligned Python style, TypeScript style conventions, versioned API routes, and behavior-focused tests.
+- Backend API routes now use the `/api/v1` prefix for published endpoints.
+- Repository instructions now include explicit TypeScript lint and formatting guidance for strict typing, imports, JSX layout, and code hygiene.
+- The frontend landing page now uses shared game manifest data instead of a placeholder screen.
+- The frontend hub now renders a playable Snake surface with keyboard controls and local score state.
+- The frontend now includes visible login and profile panels that call the auth client.
+- The frontend now includes a Snake leaderboard page and authenticated score submission flow.
+- The frontend now includes a private match page for Tic-Tac-Toe invite flows.
+- The frontend now renders a playable Maze Chase surface for anonymous play.
+- The backend now emits request-duration headers and request logs, with CORS driven by deployment settings.
 
 ### Fixed
 - None.

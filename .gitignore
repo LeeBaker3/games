@@ -15,6 +15,7 @@ dist/
 coverage/
 .vite/
 src/frontend/tsconfig.tsbuildinfo
+*.egg-info/
 
 # OS / editor
 .DS_Store

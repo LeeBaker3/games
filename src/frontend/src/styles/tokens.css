@@ -1,4 +1,6 @@
 :root {
-  color-scheme: light dark;
-  font-family: Inter, system-ui, sans-serif;
+  color-scheme: light;
+  --font-sans: 'Avenir Next', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  --surface: #fffaf4;
+  --ink: #1f2937;
 }

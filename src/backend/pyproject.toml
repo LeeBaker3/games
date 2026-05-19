@@ -1,3 +1,7 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "fun-games-backend"
 version = "0.1.0"
@@ -13,8 +17,13 @@ dependencies = [
 dev = [
   "pytest",
   "pytest-asyncio",
+  "httpx",
   "ruff",
 ]
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+exclude = ["migrations*"]
 
 [tool.ruff]
 line-length = 100

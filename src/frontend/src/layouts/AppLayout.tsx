@@ -1,5 +1,5 @@
 import type { PropsWithChildren } from 'react';
 
 export function AppLayout({ children }: PropsWithChildren) {
-  return <div>{children}</div>;
+  return <div className="app-layout">{children}</div>;
 }
