@@ -7,13 +7,13 @@ type GameHubPageProps = {
 export function GameHubPage({ onLaunchGame }: GameHubPageProps) {
     return (
         <>
-            <section className="hero-panel" aria-labelledby="hero-title">
+            <section className="hero-panel hero-panel--immersive" aria-labelledby="hero-title">
                 <div className="hero-copy">
                     <p className="eyebrow">Fun Games Platform</p>
-                    <h1 id="hero-title">One screen for quick games, scores, and private matches.</h1>
+                    <h1 id="hero-title">One menu for quick games, scores, and private matches.</h1>
                     <p className="hero-summary">
-                        Launch a game from the top menu, jump back to the hub at any time, and keep the
-                        whole experience focused on play instead of implementation details.
+                        Choose a game from the dropdown, see whether it is single-player or multiplayer,
+                        and jump into the full-screen play area without exposing implementation details.
                     </p>
                 </div>
 
@@ -33,7 +33,7 @@ export function GameHubPage({ onLaunchGame }: GameHubPageProps) {
             <section className="catalog-panel" aria-labelledby="catalog-title">
                 <div className="section-heading">
                     <p className="eyebrow">Game catalog</p>
-                    <h2 id="catalog-title">Available games</h2>
+                    <h2 id="catalog-title">Available games and modes</h2>
                 </div>
 
                 <div className="game-grid">
@@ -41,6 +41,7 @@ export function GameHubPage({ onLaunchGame }: GameHubPageProps) {
                         <article key={manifest.slug} className="game-card game-card--launchable">
                             <div className="game-card__header">
                                 <h3>{manifest.title}</h3>
+                                <span className="game-card__tag">{manifest.modes.join(' · ')}</span>
                             </div>
 
                             <dl className="game-card__details">
